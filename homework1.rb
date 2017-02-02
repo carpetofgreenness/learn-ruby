@@ -21,8 +21,8 @@ puts findMax([100,-1000,10])
 #array 2 will be the values
 def makeHash(array1,array2)
   superhash = Hash.new(0)
-  for i in 0..array1.length-1
-    superhash[array1[i]] = array2[i] #assigning key from array1 to value array2
+  array1.each.with_index do |item, index|
+    superhash[array1[index]] = array2[index] #assigning key from array1 to value array2
   end
   return superhash
 end
@@ -48,3 +48,12 @@ def fizzbuzz(max)
 end
 
 fizzbuzz(100)
+
+genres = ["jazz","hiphop","alt"]
+genres.each.with_index do |genre, index|
+  p "#{genre}: #{index}"
+end
+
+#can also use genres.map.with_index
+#less "expensive" to use each than for
+#"#{asdfasd}" is good for concatonating strings

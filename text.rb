@@ -126,3 +126,5 @@ def make_big(arg_string)
 end
 
 puts make_big("hello")
+
+zsh:1: command not found: Q
